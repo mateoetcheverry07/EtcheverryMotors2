@@ -7,7 +7,7 @@
     width: 100%;
     min-height: 100vh; /* Cambiado de height a min-height para que crezca según el contenido */
     /* Imagen de fondo de alta gama con efecto fijo */
-    background-image: linear-gradient(rgba(15, 23, 42, 0.479), rgba(15, 23, 42, 0.9)), url("../../../public/img/agencia3.jpg");
+    background-image: linear-gradient(rgba(15, 23, 42, 0.479), rgba(15, 23, 42, 0.9)), url("../../../public/img/agencia11.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -45,7 +45,7 @@
 
 .contacto-header p {
     text-align: center;
-    color: #cbd5e1;
+    color: #fbfcfd;
     font-size: 1.05rem;
     margin-bottom: 2.5rem;
 }
