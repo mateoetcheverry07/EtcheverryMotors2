@@ -1,0 +1,81 @@
+/* src/styles/Home.css */
+
+.hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Ocupa exactamente toda la altura visible */
+    background-image: linear-gradient(rgba(20, 29, 42, 0.7), rgba(26, 30, 35, 0.7)), url("../../../public/img/agencia3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white);
+    box-sizing: border-box;
+    z-index: 1; /* Se asegura de ubicarse correctamente debajo del navbar si es flotante */
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.hero-logo {
+    width: 450px;         
+    margin-bottom: 7px; 
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3)); 
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+    margin-top: 0; 
+}
+
+.hero p {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #e2e8f0;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero-logo {
+        width: 200px;
+    }
+}
+
+/* Botón del hero */
+.hero .btn-primary {
+    display: inline-block;
+    background-color: rgba(127, 133, 143, 0.219); 
+    color: #f1f1f1dc;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+    margin-top: 1rem;
+}
+
+.hero .btn-primary:hover {
+    background-color: #dee0e26b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}

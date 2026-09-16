@@ -1,0 +1,19 @@
+
+:root {
+    --color-bg: #111827;
+    --color-white: #ffffff;
+    --color-primary: #1f3e5a;
+    --color-accent: #e53e3e;
+    --font-heading: sans-serif;
+    --font-body: sans-serif;
+    --color-text: #4a5568;--color-text:
+    
+
+
+}
+
+body {
+    background-color: var(--color-bg);
+    margin: 0;
+    font-family: var(--font-body);
+}
