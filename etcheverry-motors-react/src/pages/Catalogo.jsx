@@ -11,7 +11,7 @@ function Catalogo() {
   const [anioSeleccionado, setAnioSeleccionado] = useState('Todos');
   const [paginaActual, setPaginaActual] = useState(1);
 
-  // Array de vehículos en stock
+  // Array de vehículos en stock con rutas dinámicas para GitHub Pages
   const vehiculos = [
     {
       id: 1,
@@ -23,7 +23,7 @@ function Catalogo() {
       precio: "$34.500.000",
       precioNum: 34500000,
       etiqueta: "Nuevo ingreso",
-      imagen: "/img/NNs10.jpeg",
+      imagen: `${import.meta.env.BASE_URL}img/NNs10.jpeg`,
       alt: "Chevrolet S10"
     },
     {
@@ -36,7 +36,7 @@ function Catalogo() {
       precio: "$18.900.000",
       precioNum: 18900000,
       etiqueta: "Precio irrebajable",
-      imagen: "/img/NN208.jpeg",
+      imagen: `${import.meta.env.BASE_URL}img/NN208.jpeg`,
       alt: "Peugeot 208"
     },
     {
@@ -49,7 +49,7 @@ function Catalogo() {
       precio: "$45.000.000",
       precioNum: 45000000,
       etiqueta: "Nuevo ingreso",
-      imagen: "/img/NNamarok.jpeg",
+      imagen: `${import.meta.env.BASE_URL}img/NNamarok.jpeg`,
       alt: "Volkswagen Amarok"
     },
     {
@@ -62,7 +62,7 @@ function Catalogo() {
       precio: "$25.400.000",
       precioNum: 25400000,
       etiqueta: "Nuevo ingreso",
-      imagen: "/img/NNkicks.jpeg",
+      imagen: `${import.meta.env.BASE_URL}img/NNkicks.jpeg`,
       alt: "Nissan Kicks"
     },
     {
@@ -75,7 +75,7 @@ function Catalogo() {
       precio: "$28.300.000",
       precioNum: 28300000,
       etiqueta: "Oferta",
-      imagen: "/img/NNrenegade.jpeg",
+      imagen: `${import.meta.env.BASE_URL}img/NNrenegade.jpeg`,
       alt: "Jeep Renegade"
     },
     {
@@ -88,7 +88,7 @@ function Catalogo() {
       precio: "$38.900.000",
       precioNum: 38900000,
       etiqueta: "Nuevo ingreso",
-      imagen: "/img/NNtitanio.jpeg",
+      imagen: `${import.meta.env.BASE_URL}img/NNtitanio.jpeg`,
       alt: "Fiat Titano"
     },
     {
@@ -101,7 +101,7 @@ function Catalogo() {
       precio: "$21.200.000",
       precioNum: 21200000,
       etiqueta: "Nuevo ingreso",
-      imagen: "/img/NN208B.jpeg",
+      imagen: `${import.meta.env.BASE_URL}img/NN208B.jpeg`,
       alt: "Peugeot 208 B"
     },
     {
@@ -114,7 +114,7 @@ function Catalogo() {
       precio: "$19.800.000",
       precioNum: 19800000,
       etiqueta: "Precio irrebajable",
-      imagen: "/img/NNgolf.jpeg",
+      imagen: `${import.meta.env.BASE_URL}img/NNgolf.jpeg`,
       alt: "Volkswagen Golf"
     },
     {
@@ -127,7 +127,7 @@ function Catalogo() {
       precio: "$11.500.000",
       precioNum: 11500000,
       etiqueta: "Oferta",
-      imagen: "/img/NNecosport.jpeg",
+      imagen: `${import.meta.env.BASE_URL}img/NNecosport.jpeg`,
       alt: "Ford EcoSport"
     }
   ];
@@ -135,7 +135,7 @@ function Catalogo() {
   const marcasUnicas = ['Todas', ...new Set(vehiculos.map(v => v.marca))];
   const aniosUnicos = ['Todos', ...new Set(vehiculos.map(v => v.anio))].sort((a, b) => b - a);
 
-  // Lógica de Filtrado completa (Búsqueda, Marca, Precio, Kilometraje, Año)
+  // Lógica de Filtrado completa
   const vehiculosFiltrados = vehiculos.filter(auto => {
     const matchBusqueda = auto.marca.toLowerCase().includes(busqueda.toLowerCase()) ||
                           auto.modelo.toLowerCase().includes(busqueda.toLowerCase());
@@ -172,7 +172,7 @@ function Catalogo() {
     <main className="catalogo-page">
       <div className="catalog-container">
         
-        {/* Panel lateral de filtros más amplio y completo */}
+        {/* Panel lateral de filtros */}
         <aside className="filters-sidebar">
           <h3>Filtrar búsqueda</h3>
           
