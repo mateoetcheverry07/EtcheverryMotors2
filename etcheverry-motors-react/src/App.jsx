@@ -1,5 +1,5 @@
 // src/App.jsx
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom'; // 👈 1. Importamos HashRouter
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -33,9 +33,9 @@ function AppContent() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter> {/* 👈 2. Envolvemos la app con HashRouter en lugar de BrowserRouter */}
       <AppContent />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

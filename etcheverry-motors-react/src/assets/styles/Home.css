@@ -6,7 +6,7 @@
     left: 0;
     width: 100%;
     height: 100vh; /* Ocupa exactamente toda la altura visible */
-    background-image: linear-gradient(rgba(20, 29, 42, 0.7), rgba(26, 30, 35, 0.7)), url("../../../public/img/agencia3.jpg");
+    background-image: linear-gradient(rgba(20, 29, 42, 0.7), rgba(26, 30, 35, 0.7)), url("../../../public/img/agencia7.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
