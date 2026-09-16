@@ -1,11 +1,11 @@
-/* src/styles/Catalogo.css - Con Imagen de Fondo Fija */
+/* src/styles/Catalogo.css - Con optimización para móviles */
 
 .catalogo-page {
     /* Imagen de fondo de agencia/autos con degradado oscuro para que resalten las tarjetas blancas */
     background-image: linear-gradient(rgba(15, 23, 42, 0.384), rgba(15, 23, 42, 0.85)), url("../../../public/img/agencia6.jpg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Esto hace que la foto quede fija y el contenido deslice por encima */
+    background-attachment: fixed; /* En desktop queda fijo y elegante */
     background-repeat: no-repeat;
     
     min-height: 100vh;
@@ -325,10 +325,20 @@
 }
 
 @media (max-width: 900px) {
+    .catalogo-page {
+        background-attachment: scroll; /* Soluciona el error de renderizado del fondo fijo en celulares */
+        padding-top: 95px; /* Ajuste para que el navbar fijo no tape el título */
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
     .catalog-container {
         grid-template-columns: 1fr;
+        padding: 0;
     }
     .filters-sidebar {
         display: none;
+    }
+    .catalog-header-top h1 {
+        font-size: 1.6rem; /* Título adaptado para pantallas chicas */
     }
 }

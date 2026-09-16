@@ -48,13 +48,13 @@ function Vende() {
   return (
     <main className="vende-page">
       <div className="vende-card">
-        <h2>Cotizá y vendé tu auto en 1 día</h2>
+        <h2>Vende tu vehículo al mejor precio</h2>
         <p className="vende-subtitle">
-          ¡Olvidate de la burocracia! Vendé online de forma rápida y segura con Etcheverry Motors.
+          Completá el formulario con los datos de tu usado y un asesor se comunicará con vos a la brevedad.
         </p>
 
         <form onSubmit={handleSubmit} onReset={handleReset}>
-          {/* Fila superior de cotización rápida */}
+          {/* Fila superior con los datos principales del vehículo (sin el botón cotizar) */}
           <div className="quick-form-row">
             <div className="form-group-inline">
               <label htmlFor="anio">Año</label>
@@ -93,10 +93,6 @@ function Vende() {
                 required
               />
             </div>
-
-            <button type="submit" className="btn-cotizar">
-              Cotizar
-            </button>
           </div>
 
           {/* Grilla de contacto y detalles */}

@@ -1,13 +1,10 @@
 /* src/styles/Vende.css */
 
 .vende-page {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative; /* Cambiado de absolute a relative para permitir flujo natural y scroll */
     width: 100%;
-    height: 100vh;
-    /* Cambiá "agencia4.jpg" por el nombre de la imagen que descargues y guardes en public/img/ */
-    background-image: linear-gradient(rgba(20, 29, 42, 0.75), rgba(26, 30, 35, 0.75)), url("../../../public/img/agencia4.jpg");
+    min-height: 100vh; /* Cambiado a min-height para que crezca según el contenido */
+    background-image: linear-gradient(rgba(20, 29, 42, 0.75), rgba(26, 30, 35, 0.75)), url("/img/agencia4.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,9 +12,9 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    overflow: hidden; /* Evita que la página sea deslizable */
+    /* overflow: hidden; -> Eliminado para permitir el scroll natural */
     z-index: 1;
-    padding-top: 40px;
+    padding: 100px 1rem 3rem 1rem; /* Padding superior mayor para que el navbar fijo no tape el título */
 }
 
 .vende-card {
@@ -47,10 +44,10 @@
     text-align: left;
 }
 
-/* Fila superior de cotización rápida */
+/* Fila superior ajustada a 3 columnas sin el botón cotizar */
 .quick-form-row {
     display: grid;
-    grid-template-columns: 1fr 1.5fr 1.5fr auto;
+    grid-template-columns: 1fr 1.5fr 1.5fr;
     gap: 1rem;
     align-items: flex-end;
     background: #f8fafc;
@@ -81,22 +78,6 @@
     font-size: 0.9rem;
     background-color: #ffffff;
     color: #1a202c !important;
-}
-
-.btn-cotizar {
-    background-color: #3182ce;
-    color: white;
-    border: none;
-    padding: 0.55rem 1.2rem;
-    border-radius: 6px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    height: 36px;
-}
-
-.btn-cotizar:hover {
-    background-color: #2b6cb0;
 }
 
 /* Grilla extendida del formulario */
@@ -210,8 +191,6 @@
         grid-template-columns: 1fr;
     }
     .vende-page {
-        height: auto;
-        overflow-y: auto;
         padding: 90px 1rem 2rem 1rem;
     }
 }
